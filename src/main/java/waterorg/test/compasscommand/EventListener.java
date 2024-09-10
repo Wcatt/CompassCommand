@@ -17,6 +17,8 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import me.clip.placeholderapi.PlaceholderAPI;
 
+import java.util.Objects;
+
 public class EventListener implements Listener{
     private Method is = new Method();
     @EventHandler
@@ -37,18 +39,18 @@ public class EventListener implements Listener{
                     || ((evt.getAction().equals(Action.LEFT_CLICK_AIR)||evt.getAction().equals(Action.LEFT_CLICK_BLOCK)) && is.getConfig().getBoolean("LeftClick"))) {
                 evt.setCancelled(true);
                 Player player = evt.getPlayer();
-                if (is.getConfig().getString("PlayerCommand") != "") {
+                if (!Objects.equals(is.getConfig().getString("PlayerCommand"), "")) {
                     String commandText = "/" + is.getConfig().getString("PlayerCommand");
                     if (CompassCommand.hasPapi()) commandText = PlaceholderAPI.setPlaceholders(player, commandText);
                     evt.getPlayer().chat(commandText);
                 }
-                if (is.getConfig().get("ServerCommand") !=""){
+                if (!Objects.equals(is.getConfig().getString("ServerCommand"), "")){
                     CommandSender sender = Bukkit.getConsoleSender();
                     String commandText = is.getConfig().getString("ServerCommand");
                     if (CompassCommand.hasPapi()) commandText = PlaceholderAPI.setPlaceholders(player,commandText);
                     sender.getServer().dispatchCommand(sender,commandText);
                 }
-                if (is.getConfig().getString("CmdMessage") != "") {
+                if (!Objects.equals(is.getConfig().getString("CmdMessage"), "")) {
                     String cmdMessageText = is.getConfig().getString("CmdMessage");
                     if (CompassCommand.hasPapi()) cmdMessageText = PlaceholderAPI.setPlaceholders(player,cmdMessageText);
                     evt.getPlayer().sendMessage(cmdMessageText);
