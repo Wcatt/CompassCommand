@@ -5,8 +5,9 @@
 
 package waterfun.waterwood.compasscommand;
 
+import me.waterwood.bukkit.Metrics;
 import org.bukkit.Bukkit;
-import me.waterwood.BukkitPlugin;
+import me.waterwood.bukkit.BukkitPlugin;
 
 
 public final class CompassCommand extends BukkitPlugin {
@@ -26,7 +27,8 @@ public final class CompassCommand extends BukkitPlugin {
         this.getServer().getPluginManager().registerEvents(new PlayerEvents(), this);
         getCommand("CompassCommand").setExecutor(new Commands(this));
         getCommand("CompassCommand").setTabCompleter(new Commands(this));
-
+        Methods.init(this);
+        Metrics metrics = new Metrics(this,23400);
     }
 
     public void onDisable() {

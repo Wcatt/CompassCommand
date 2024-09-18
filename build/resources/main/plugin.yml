@@ -1,6 +1,6 @@
 name: CompassCommand
 version: 2.0.0
-author: hachett
+author: waterwood
 description: A plugin enable that item binding command
 main: waterfun.waterwood.compasscommand.CompassCommand
 commands:

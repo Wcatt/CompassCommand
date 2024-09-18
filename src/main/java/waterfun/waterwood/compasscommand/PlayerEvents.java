@@ -14,7 +14,7 @@ import org.bukkit.event.player.PlayerRespawnEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import me.clip.placeholderapi.PlaceholderAPI;
-import me.waterwood.BukkitPlugin;
+import me.waterwood.bukkit.BukkitPlugin;
 
 public class PlayerEvents implements Listener{
     @EventHandler

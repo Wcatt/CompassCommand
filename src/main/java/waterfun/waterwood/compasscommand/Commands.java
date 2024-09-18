@@ -3,7 +3,7 @@ package waterfun.waterwood.compasscommand;
 import org.bukkit.command.*;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import me.waterwood.BukkitPlugin;
+import me.waterwood.bukkit.BukkitPlugin;
 
 import java.util.ArrayList;
 import java.util.List;

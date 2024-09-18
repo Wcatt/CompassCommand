@@ -1,4 +1,4 @@
-package me.waterwood;
+package me.waterwood.bukkit;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.waterwood.common.Colors;

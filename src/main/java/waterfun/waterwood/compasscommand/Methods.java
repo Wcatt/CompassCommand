@@ -6,7 +6,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import me.clip.placeholderapi.PlaceholderAPI;
 import org.waterwood.io.FileConfigProcess;
-import me.waterwood.BukkitPlugin;
+import me.waterwood.bukkit.BukkitPlugin;
 
 import java.util.ArrayList;
 
