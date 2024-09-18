@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="CompassCommand">
+    <output-path>$PROJECT_DIR$/out/artifacts/CompassCommand</output-path>
+    <root id="archive" name="CompassCommand.jar">
+      <element id="module-output" name="CompassCommand.main" />
+      <element id="dir-copy" path="$PROJECT_DIR$/src/main/resources" />
+    </root>
+  </artifact>
+</component>

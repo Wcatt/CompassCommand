@@ -1,0 +1,60 @@
+# CommandCompass 2.0
+# Auther Hachett(Waterwood)
+# mc version:1.12 - 1.20
+# ===================================================================
+# NOTES:
+# to reload the config tpye:/cpcreload
+# only CompassCommand.reload was given or server terminal or op.
+#
+# when you see note"/!\"
+# this means those options will only check when server is loading;
+# to make these specific changes(as mentioned above) effect,you need restart server.
+#
+# other options' changes can take effect while cpcreload command was type.
+#
+# placeholderAPI is available,if you install papi and registered papi vars will take effect.
+#
+# 'cpcreload'重载插件,需要 CompassCommand.reload 权限
+# papi变量已经支持,可选papi是否安装
+# 加"/!\"标记的只能在服务器加载的时候生效，重载插件无法生效。这时候要应用更改请重启服务端。
+#=====================================================================
+
+config-file-version: 1.1
+
+locale: zh
+check-update:
+  enable: true
+  auto-download: true
+# 菜单的lores(就是下面的多行的文本)
+lores:
+  - "§4右键点击§e打开主菜单"
+  - ""
+#给你的菜单设置标题
+display-name: "§e主菜单"
+
+#绑定的指定物品，如果要用钟表请替换成:WATCH
+# /!\
+material: "COMPASS"
+
+# 玩家在使用绑定的物品对空气进行互动是时候触发指令绑定是哪个手
+left-click: false
+right-click: true
+
+# 在玩家登录服务器的时候是否要给一个菜单给玩家。
+give-on-join: true
+
+# 是否允许玩家丢出菜单
+allow-player-drop: false
+
+# 给你的菜单绑定指令，不加"/"
+# 这些指令必须被注册过并且未被其他插件指令绑定过(否则可能会造成冲突)
+# 实际上就相当于自动帮玩家打了一个:"/+xxx"比如如下自动帮玩家打了一个"/Menu"回车
+player-command: "Menu"
+
+# 当玩家对绑定物品交互的时候,服务器执行的指令(不需要权限)
+# 与playercommand不同,此命令来自服务器
+# 通常上方的playercommand一个就行了大部分菜单插件用户都有统一的用户菜单的指令。
+server-command: ""
+
+# 当玩家使用菜单的时候对该玩家发出的消息
+command-message: "§e你打开了服务器主菜单"
