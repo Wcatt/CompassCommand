@@ -55,7 +55,7 @@ public abstract class Updater extends WebIO {
     public static CompletableFuture<Boolean> downloadFile(String fileUrl, String savedPath){
         return CompletableFuture.supplyAsync(() -> {
             try {
-                WebIO.download(fileUrl,savedPath);
+                download(fileUrl,savedPath);
                 return true;
             } catch (IOException e) {
                 return false;
