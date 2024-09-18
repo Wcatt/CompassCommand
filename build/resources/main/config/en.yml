@@ -1,0 +1,44 @@
+# enable the plugin?
+# /!\
+enable: true
+
+check-update:
+  enable: true
+  auto-download: true
+# set the lores,one or more lines will also be accepted
+lores:
+  - "§4Click §e to open main menu"
+  - "§aWelcome!%player_name%"
+  - ""
+
+#set the menu's name
+display-name: "§eMain menu"
+
+# which material they hand can act.
+# to use item clock type: WATCH
+# /!\
+material: "WATCH"
+
+# one of these below must be "true" otherwise it will have no effect.
+left-click: false
+right-click: true
+
+# when player join will check if they have had the item,if not ，then give them one.
+give-on-join: true
+
+# whether allow play drop the item,if player drop when this set to true ,delete and create a new one to player
+allow-player-drop: false
+
+# command when the item was used just simulating player chatting like("/"+xxx)
+# only one command and the command must be registered
+player-command: "Menu"
+
+# command that when the item was used and server is forced to do what(!!ignore permission!!)
+# not like playercommand,this command comes from server.
+# Assuming the command 'open <YourMenu> <PlayerName>' is used to open the menu for the player ↓
+# use like: open <YourMenu> <PlayerName> - open the menu for player .
+# this option is not necessary. cause usually playercommand can open most menu plugin's menu for player
+server-command: ""
+
+# message sent to player when item was used.
+command-message: "§eOpen the main menu"
