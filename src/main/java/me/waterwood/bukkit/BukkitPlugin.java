@@ -21,15 +21,15 @@ public class BukkitPlugin extends JavaPlugin implements Plugin {
     private static  FileConfigProcess pluginData;
     private static boolean locale = false;
     public void initialization(){
-        if (logger == null){ logger = getLogger();}
         if(pluginData == null){
             try {
                 pluginData = new FileConfigProcess();
                 pluginData.loadSource("plugin", "yml");
             }catch (IOException e){
-                logger.warning("Plugin not founded");
+                Logger.getLogger(this.getClass().getName()).warning("Plugin not founded");
             }
         }
+        if (logger == null){ logger = Logger.getLogger(getPluginInfo("name"));}
     }
     public BukkitPlugin(){
         initialization();
@@ -166,7 +166,7 @@ public class BukkitPlugin extends JavaPlugin implements Plugin {
     public static String getMessage(String key){return messages.get(Locale.getDefault().getLanguage()).getString(key);}
     public static String getPluginInfo(){
         return "§6§l%s§r §ev§7%s§r".formatted(getPluginInfo("name"), getPluginInfo("version")) +
-                "\n§6§lauthor:§7%s §6§lversion:§7%s".formatted( getPluginInfo("author"), getPluginInfo("version"));
+                "§6§l by: §7%s".formatted( getPluginInfo("author"));
     }
     public void showPluginTitle(String lineTitleDisplay){
         for(String str : LineFontGenerator.parseLineText(lineTitleDisplay)) {

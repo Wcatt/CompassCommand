@@ -166,6 +166,10 @@ public abstract class WaterPlugin  implements Plugin {
     public static String getPluginInfo(String key){
         return (String)pluginData.get(key);
     }
+    public static String getPluginInfo(){
+        return "§6§l%s§r §ev§7%s§r".formatted(getPluginInfo("name"), getPluginInfo("version")) +
+                "§6§l by: §7%s".formatted( getPluginInfo("author"));
+    }
     public void showPluginTitle(String lineTitleDisplay){
         for(String str : LineFontGenerator.parseLineText(lineTitleDisplay)) {
             logMsg("§6%s§r".formatted(str));
