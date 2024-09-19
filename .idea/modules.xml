@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/CompassCommand.iml" filepath="$PROJECT_DIR$/.idea/modules/CompassCommand.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/CompassCommand.main.iml" filepath="$PROJECT_DIR$/.idea/modules/CompassCommand.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Waterorg.test.CompassCommand.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Waterorg.test.CompassCommand.main.iml" />
     </modules>
   </component>
 </project>
