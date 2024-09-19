@@ -3,15 +3,17 @@ version: 2.0.0
 author: waterwood
 description: A plugin enable that item binding command
 main: waterfun.waterwood.compasscommand.CompassCommand
+
 commands:
-  CompassCommand:
-    aliases:
-      - cpc
-    description: CompassCommand main commands
-  CompassCommand.reload:
-    description: reload config
+  compasscommand:
+    aliases: ["cpc"]
+
 permissions:
-  CompassCommand.reload:
+  compasscommand.*:
+    description:  "ability to use all compasscommand commands"
+    children:
+      compasscommand.reload: true
+  compasscommand.reload:
     default: op
     description: to reload the plugin
 softdepend: [PlaceholderAPI]

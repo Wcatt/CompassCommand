@@ -16,20 +16,21 @@ public class Commands implements CommandExecutor, TabCompleter {
     @Override
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         if(sender.hasPermission("compasscommand.admin")){
-            if(args.length >= 1){
-                plugin.logMsg("illegal-args-message");
+            if(args.length > 1){
+                plugin.logMsg(BukkitPlugin.getPluginMessage("illegal-args-message"));
+                return false;
             }
-            if(command.getName().equals("CompassCommand") ){
+            if(command.getName().equals("compasscommand") ){
                 if(args.length == 0) {
                     sender.sendMessage(BukkitPlugin.getPluginInfo());
                 }else{
                     CompassCommand.getInstance().reloadConfig();
                     Methods.init(plugin);
-                    plugin.logMsg(BukkitPlugin.getPluginMessage("config-reload-message"));
+                    sender.sendMessage(BukkitPlugin.getPluginMessage("config-reload-message"));
                 }
             }
         }else{
-            plugin.logMsg(BukkitPlugin.getPluginMessage("no-permission-message"));
+            sender.sendMessage(BukkitPlugin.getPluginMessage("no-permission-message"));
         }
         return true;
     }
