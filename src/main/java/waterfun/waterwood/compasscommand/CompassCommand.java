@@ -16,7 +16,6 @@ public final class CompassCommand extends BukkitPlugin {
         this.initialization();
         instance = this;
         this.showPluginTitle("CPCCMD");
-        logMsg("§21234§r");
         this.loadConfig(false);
         Methods.init(this);
         if(Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null){
