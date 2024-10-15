@@ -1,4 +1,17 @@
 name: CompassCommand
-version: '${version}'
+version: 2.1.0
+author: waterwood
+description: A plugin enable that item binding command
 main: waterfun.waterwood.compasscommand.CompassCommand
-api-version: '2.1.0'
+commands:
+  CompassCommand:
+    aliases:
+      - cpc
+    description: CompassCommand main commands
+  CompassCommand.reload:
+    description: reload config
+permissions:
+  CompassCommand.reload:
+    default: op
+    description: to reload the plugin
+softdepend: [PlaceholderAPI]
