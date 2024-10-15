@@ -1,0 +1,2 @@
+# CompassCommand
+A bukkit plugin
