@@ -1,0 +1,4 @@
+name: CompassCommand
+version: '${version}'
+main: waterfun.waterwood.compasscommand.CompassCommand
+api-version: '2.1.0'
